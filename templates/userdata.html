@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Data</title>
+  	<link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+  	<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+</head>
+<body>
+<ul>
+	<li><a href="/">Home</a></li>
+	<li><a class="active" href="/userdata">User Data</a></li>
+	<li><a href="/Transaction">Begin Transaction</a><li>
+	<li><a href="/Transaction_history">View Transaction History</a></li>
+</ul><br>
+<h1 style="text-align: center">User Data</h1>
+<table id="details">
+	<tr>
+		<td>Name</td>
+		<td>Email</td>
+		<td>Credit balance</td>
+	</tr>
+	{{userlist}}
+</table>
+</body>
+</html>

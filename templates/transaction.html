@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transactions</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/disform.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+</head>
+<body>
+<ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/userdata">User Data</a></li>
+	<li><a class="active" href="/Transaction">Begin Transaction</a><li>
+	<li><a href="/Transaction_history">View Transaction History</a></li>
+</ul><br>
+<h1 style="text-align: center">Credit Transactions</h1>
+<div class="out">
+	<form class="in" action='/Transaction_details' method="POST">
+		<label>Select Sender</label><br>
+		<select name='sender' id='sender'>
+			<option value='none'>Select user</option>
+			{{userlist}}
+		</select><br>
+		<label>Select Receiver</label><br>
+		<select name='receiver' id='receiver'>
+			<option value='none'>Select user</option>
+			{{userlist}}
+		</select><br>
+		<label>Enter amount to transfer:</label><br>
+		<input name="amount" id="amount" type="text" required placeholder="99999">
+		<input type='submit' value="Submit">
+	</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Credit Management</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+</head>
+<body>
+<ul>
+	<li><a class="active" href="/">Home</a></li>
+	<li><a href="/userdata">User Data</a></li>
+	<li><a href="/Transaction">Begin Transaction</a><li>
+	<li><a href="/Transaction_history">View Transaction History</a></li>
+</ul>
+<h1 style="text-align: center;">Credit Management</h1>
+<div style="text-align: center;">
+<p>Welcome to Credit Management a projects to implement basic CRUD in a dynamic website.</p>
+<p>Credits can be transferred among users.</p>
+<p>Credits cannot be transferred if transfer amount if grater than current balance.</p>
+<p>Credits cannot be transferred if the sender and receiver are same.</p>
+<p>Transaction will be unsuccessful if amount is 0.</p>
+</div>
+</body>
+</html>
