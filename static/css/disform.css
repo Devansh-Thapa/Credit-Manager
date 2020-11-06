@@ -13,8 +13,8 @@ select option {
 }
 input[type=submit] {
   width: 75%;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #2EC4B6;
+  color: #093A3E;
   padding: 20px 20px 20px 20px;
   margin: 8px 0;
   border: none;

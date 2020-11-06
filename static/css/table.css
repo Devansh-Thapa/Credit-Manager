@@ -23,3 +23,17 @@
   background-color: #4CAF50;
   color: white;
 }
+
+button {
+  background-color: #2EC4B6;
+  color: #093A3E;
+  border: none;
+  width: 25%;
+  border-radius: 4px;
+  padding: 10px 20px;
+} 
+
+button:hover {
+        background-color:#093A3E;
+        color: #2EC4B6
+      } 

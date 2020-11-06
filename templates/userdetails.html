@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Details</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+  	<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+  	<link rel="stylesheet" href="{{ url_for('static', filename='css/disform.css') }}">
+</head>
+<body>
+<ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/userlist">User List</a></li>
+	<li><a href="/Transaction">Begin Transaction</a><li>
+	<li><a href="/Transaction_history">View Transaction History</a></li>
+</ul><br>
+<h1 style="text-align: center">{{user}}<br>Account Details</h1>
+<table id="details">
+	<tr>
+		<td>Name</td>
+		<td>Email</td>
+		<td>Balance</td>
+	</tr>
+	{{userdata}}
+</table>
+
+<h1 style="text-align: center">Transaction</h1>.
+<div class="out">
+	<form class="in" action='/Transaction_details' method="POST">
+		{{senderdata}}
+		<label>Select Receiver</label><br>
+		<select name='receiver' id='receiver'>
+			<option value='none'>Select user</option>
+			{{optionlist}}
+		</select><br>
+		<label>Enter amount to transfer:</label><br>
+		<input name="amount" id="amount" type="text" required placeholder="99999">
+		<input name="subbutton" type="submit" id=sender value="submit" >
+	</form>
+</div>
+
+<h1 style="text-align: center">{{user}}'s Transaction History</h1>.
+<table id="details">
+	<tr>
+		<td>Sender</td>
+		<td>Receiver</td>
+		<td>Amount</td>
+	</tr>
+	{{transactionlist}}
+</table>
+
+</body>
+</html>

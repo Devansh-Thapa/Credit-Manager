@@ -7,8 +7,8 @@
 <body>
 <ul>
 	<li><a href="/">Home</a></li>
-	<li><a href="/userdata">User Data</a></li>
-	<li><a class="active" href="/Transaction">Begin Transaction</a><li>
+	<li><a href="/userlist">User List</a></li>
+	<li><a href="/Transaction">Begin Transaction</a><li>
 	<li><a href="/Transaction_history">View Transaction History</a></li>
 </ul><br>
 <h1 style="text-align: center">Transaction details</h1>
@@ -17,7 +17,7 @@
 		{% elif option==1%}
 		<p><h1 style="color: red; text-align: center;">Transaction Failed:Insufficent Balance!!!</h1></p>
 		{% elif option==2 %}
-		<p><h1 style="color: red;text-align: center;">Trancation Failed:Cannot do transaction with same user.</h1></p>
+		<p><h1 style="color: red;text-align: center;">Trancation Failed:Cannot do transaction with same user.{{sender}}</h1></p>
 		{% else %}
 		<p><h1 style="color: green;text-align: center;">Transaction Successfull.</h1></p>
 		{% endif %}
